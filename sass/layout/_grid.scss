@@ -1,0 +1,29 @@
+.row {
+  max-width: $grid-width;
+  margin: 0 auto;
+  margin-bottom: $grid-horizontal-space;
+  &:not(:last-child) {
+    margin-bottom: $grid-horizontal-space;
+  }
+
+  @include clearfix;
+
+  [class^="col-"] {
+    //all classes starting with col- are affected to this styles
+    float: left;
+    &:not(:last-child) {
+      margin-right: $grid-vertical-space;
+    }
+  }
+
+  .col-1-2 {
+    width: calc((100% - #{$grid-vertical-space}) / 2);
+  }
+
+  .col-1-3 {
+    width: calc((100% - 2 * #{$grid-vertical-space}) / 3);
+  }
+  .col-1-4 {
+    width: calc((100% - 3 *#{$grid-vertical-space}) / 4);
+  }
+}

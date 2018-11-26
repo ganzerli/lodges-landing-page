@@ -1,0 +1,17 @@
+.seciton-about {
+  color: $gray-text;
+  background-color: $simil-white;
+  padding: 18rem 0; // to have space pushing up the section
+  margin-top: -25vh;
+}
+.info-section {
+  padding: 5rem 0;
+  background-image: $gradient-primary, url("../img/alpine-section-features.jpg");
+  background-position: left;
+  transform: skewY(3deg);
+  margin-top: -10rem;
+  & > .row {
+    transform: skewY(-3deg);
+    margin: 3rem 1rem;
+  }
+}

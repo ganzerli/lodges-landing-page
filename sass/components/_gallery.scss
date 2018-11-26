@@ -1,0 +1,38 @@
+.gallery {
+  position: relative;
+  width: 100%;
+  border: 1px solid transparent; /*to give a width, or it behaves as if the gallery div does not exists*/
+  &-photo {
+    width: 50%;
+    position: absolute;
+    border-radius: 5px;
+    box-shadow: 0 1.5rem 4rem $black-shadow;
+    z-index: 5;
+    transition: all 0.3s ease-out;
+    outline-offset: 1.5rem;
+    outline-color: $gradient-sand;
+
+    &-1 {
+      left: 3%;
+      top: 16rem;
+    }
+    &-2 {
+      left: 25%;
+      top: 2rem;
+    }
+    &-3 {
+      left: 52%;
+      top: 12rem;
+    }
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 2.5rem 4rem $black-shadow;
+      outline: 1.5rem solid $gradient-skyblue;
+      z-index: 10;
+    }
+  }
+  /* when hovering the entire section the .gallery-photo not hovered get affected*/
+  &:hover &-photo:not(:hover) {
+    transform: scale(0.95);
+  }
+}

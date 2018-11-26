@@ -1,0 +1,29 @@
+@keyframes welcomeButton {
+  0% {
+    transform: scale(4, 0.3);
+    opacity: 0;
+    background: $black-shadow;
+  }
+  100% {
+  }
+}
+@keyframes welcomeLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-25rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes welcomeUp {
+  0% {
+    opacity: 0;
+    transform: translate(15rem, 5rem) rotate(20deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0) rotate(0);
+  }
+}

@@ -1,0 +1,28 @@
+$gradient-red: #f7797d;
+$gradient-sand: #fbd886;
+$gradient-skyblue: #c6ffdd;
+
+$gradient-primary: linear-gradient(
+  20deg,
+  rgba(247, 121, 125, 0.6),
+  rgba(251, 216, 134, 0.6),
+  rgba(198, 255, 221, 0.6)
+);
+$gradient-hard: linear-gradient(
+  205deg,
+  rgba(247, 121, 125, 1),
+  rgba(251, 216, 134, 1),
+  rgba(198, 255, 221, 1)
+);
+$gray-text: #888;
+$white: #fff;
+$simil-white: #eee;
+$grey-blue: #556;
+$azure: azure;
+$firebrick: firebrick;
+$black-shadow: rgba(0, 0, 0, 0.2);
+
+//GRID
+$grid-width: 114rem;
+$grid-horizontal-space: 8rem;
+$grid-vertical-space: 4rem;

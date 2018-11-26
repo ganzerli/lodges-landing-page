@@ -1,0 +1,75 @@
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  color: $gray-text;
+}
+a {
+  text-decoration: none;
+}
+
+.primary-header-container {
+  position: absolute;
+  text-align: center;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  .primary-header {
+    color: $white;
+    text-transform: uppercase;
+    backface-visibility: hidden; /* css trick to fix the animation end in the childrens */
+    margin-bottom: 3rem;
+    &-big {
+      display: block; /* takes the whole width */
+      font-size: 4rem;
+      letter-spacing: 0.5rem;
+      animation: welcomeLeft 1s ease;
+    }
+    &-small {
+      display: block;
+      font-size: 2rem;
+      letter-spacing: 1rem;
+      animation: welcomeUp 1.5s ease;
+    }
+  }
+}
+
+.secondary-header {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  text-align: center;
+  display: inline-block;
+  background: #22c1c3; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #fdbb2d,
+    #22c1c3
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #fdbb2d,
+    #22c1c3
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 2px;
+  text-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+  &:hover {
+    transform: skewY(-1deg) skewX(1deg) scale(1.01, 1.01);
+    letter-spacing: 4px;
+    text-shadow: 0.5rem 1rem 2rem $black-shadow;
+  }
+}
+.tertiary-header {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.presentation {
+  font-size: 1.5rem;
+  &:not(:last-child) {
+    margin-bottom: 5rem;
+  }
+}

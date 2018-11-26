@@ -1,0 +1,9 @@
+// all of the child elements in the row element are floated so they have no height
+@mixin clearfix {
+  /*APPENDS AN ELEMMENT AFTER THE ELEMENT THAT CLEARS THE FLOATS*/
+  &::after {
+    content: "";
+    display: table; /*standard version of clearfix*/
+    clear: both;
+  }
+}

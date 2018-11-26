@@ -1,0 +1,70 @@
+.button-animated {
+  animation: welcomeButton 0.3s ease-out 1s;
+  animation-fill-mode: backwards;
+  /* it starts at 0% state */
+  &:link,
+  &:visited {
+    padding: 1rem 2rem;
+    display: inline-block;
+    font-weight: bolder;
+    background-color: $azure;
+    color: $grey-blue;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+    transition: all 0.2s ease-in;
+    position: relative;
+  }
+  &:hover {
+    transform: translateY(-0.2rem);
+    box-shadow: 0 0.5rem 0.5rem $black-shadow;
+    &:after {
+      transform: scale(3, 0.5);
+      opacity: 0;
+      background: $black-shadow;
+    }
+  }
+  &:active {
+    color: $firebrick;
+    transform: translateY(-0.1rem);
+    box-shadow: 0 0.4rem 0.3rem $black-shadow;
+  }
+  &::after {
+    content: "";
+    display: inline-block;
+    background-color: $white;
+    height: 100%;
+    width: 100%;
+    border-radius: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.2s ease-in;
+  }
+}
+
+.text-btn {
+  &:link,
+  &:visited {
+    font-size: 1.5rem;
+    color: $gradient-red;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px solid $gradient-red;
+    padding: 3px;
+    text-shadow: 1px 1px 1px $gradient-sand, -1px -1px 1px $gradient-sand;
+    transition: all 0.2s;
+  }
+  &:hover {
+    background-color: $gradient-sand;
+    border: none;
+    color: $gradient-skyblue;
+    text-shadow: 1px 1px 1px $gradient-red, -1px -1px 1px $gradient-red;
+    box-shadow: 0 1rem 2rem $black-shadow;
+    transform: translateY(-3px);
+  }
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem $black-shadow;
+  }
+}

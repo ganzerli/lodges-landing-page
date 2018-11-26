@@ -1,0 +1,28 @@
+.infobox {
+  position: relative;
+  width: 100%;
+  border-radius: 3px;
+  background: rgba($simil-white, 0.7);
+  text-align: center;
+  padding: 1rem;
+  box-shadow: 0 1.5rem 4rem $black-shadow;
+  backface-visibility: hidden;
+  transition: all 0.2s ease-out;
+
+  &-icon {
+    font-size: 5vmax;
+    color: transparent;
+    background: $gradient-hard;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  &-text {
+    font-size: 1.4rem;
+    padding: 2rem;
+  }
+  &:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 2.5rem 3rem $black-shadow;
+    backface-visibility: visible;
+  }
+}
