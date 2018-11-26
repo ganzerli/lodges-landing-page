@@ -1,0 +1,154 @@
+.card {
+  perspective: 1000px;
+  -moz-perspective: 1000px;
+  position: relative;
+  min-height: 43rem; // because the card sides are absolute the height collapses, so the card needs a height itself, sae as side
+  &-side {
+    min-height: 43rem;
+    position: absolute;
+    width: 90%;
+    backface-visibility: hidden;
+    transition: all 0.7s ease-in-out;
+    border-radius: 3px;
+    overflow: hidden;
+
+    &-front {
+      background-color: white;
+    }
+    &-back {
+      background-color: white;
+      transform: rotateY(180deg);
+      &1 {
+        background-image: linear-gradient(
+          25deg,
+          $gradient-skyblue,
+          $gradient-completion-skyblue
+        );
+      }
+      &2 {
+        background-image: linear-gradient(
+          25deg,
+          $gradient-red,
+          $gradient-completion-red
+        );
+      }
+      &3 {
+        background-image: linear-gradient(
+          25deg,
+          $gradient-sand,
+          $gradient-completion-sand
+        );
+      }
+    }
+  }
+  &:hover &-side-front {
+    transform: rotateY(180deg);
+  }
+  &:hover &-side-back {
+    transform: rotateY(360deg);
+  }
+  // FRONT SIDE OF THE CARD
+  &-picture {
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    position: absolute;
+    height: 45%;
+    width: 100%;
+    -webkit-clip-path: polygon(
+      0 0,
+      100% 0,
+      100% 95%,
+      72% 90%,
+      58% 71%,
+      40% 87%,
+      0 80%
+    );
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% 100%,
+      72% 95%,
+      54% 75%,
+      40% 90%,
+      0 87%
+    );
+    &-1 {
+      background-image: linear-gradient(
+          25deg,
+          $gradient-skyblue,
+          $gradient-completion-skyblue
+        ),
+        url("../img/malga3.jpg");
+    }
+    &-2 {
+      background-image: linear-gradient(
+          25deg,
+          $gradient-red,
+          $gradient-completion-red
+        ),
+        url("../img/malga2.jpg");
+    }
+    &-3 {
+      background-image: linear-gradient(
+          25deg,
+          $gradient-sand,
+          $gradient-completion-sand
+        ),
+        url("../img/malga1.jpg");
+    }
+  }
+  // / CARD TITLE
+  &-title {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    z-index: 2;
+    color: $white;
+    text-transform: uppercase;
+    font-size: 2rem;
+    width: 50%;
+    text-align: right;
+  }
+  &-title-span {
+    padding: 0.5rem 1rem;
+    -webkit-box-decoration-brake: clone; // not working for some reason
+    &-1 {
+      background-image: linear-gradient(
+        25deg,
+        rgba($gradient-skyblue, 0.8),
+        rgba($gradient-completion-skyblue, 0.8)
+      );
+    }
+    &-2 {
+      background-image: linear-gradient(
+        25deg,
+        rgba($gradient-red, 0.8),
+        rgba($gradient-completion-red, 0.8)
+      );
+    }
+    &-3 {
+      background-image: linear-gradient(
+        25deg,
+        rgba($gradient-sand, 0.8),
+        rgba($gradient-completion-sand, 0.8)
+      );
+    }
+  }
+  &-descr {
+    position: relative;
+    display: block;
+    font-size: 1.3rem;
+    width: 70%;
+    margin: 20rem auto 1rem auto;
+  }
+  &-list {
+    width: 70%;
+    margin: 0 auto;
+    padding: 0.5rem;
+    & li {
+      padding: 1rem 2rem;
+      border-top: solid 1px rgba(0, 0, 0, 0.2);
+    }
+  }
+}

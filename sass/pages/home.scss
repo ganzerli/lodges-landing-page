@@ -7,11 +7,20 @@
 .info-section {
   padding: 5rem 0;
   background-image: $gradient-primary, url("../img/alpine-section-features.jpg");
-  background-position: left;
-  transform: skewY(3deg);
+  background-position: top left;
   margin-top: -10rem;
+  transform: skewy(4deg);
   & > .row {
-    transform: skewY(-3deg);
-    margin: 3rem 1rem;
+    margin: 4rem 1rem;
+    transform: skewY(-4deg);
+  }
+}
+.section-offers {
+  color: $gray-text;
+  background-color: $simil-white;
+  padding: 10rem 0;
+  text-align: center;
+  & > .row {
+    margin: 0 auto;
   }
 }
