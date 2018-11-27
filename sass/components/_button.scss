@@ -11,7 +11,7 @@
     color: $grey-blue;
     font-size: 1.5rem;
     border-radius: 1rem;
-    transition: all 0.2s ease-in;
+    transition: all 0.2s ease-out;
     position: relative;
   }
   &:hover {
@@ -20,7 +20,7 @@
     &:after {
       transform: scale(3, 0.5);
       opacity: 0;
-      background: $black-shadow;
+      background: white;
     }
   }
   &:active {
@@ -39,7 +39,7 @@
     top: 0;
     left: 0;
     z-index: -1;
-    transition: all 0.2s ease-in;
+    transition: all 0.15s ease-out;
   }
 }
 

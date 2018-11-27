@@ -1,7 +1,7 @@
 $gradient-red: #f7797d;
-$gradient-completion-red: #cf5949;
+$gradient-completion-red: #ec4f3a;
 $gradient-sand: #fbd886;
-$gradient-completion-sand: #ffb87b;
+$gradient-completion-sand: #ffa023;
 $gradient-skyblue: #c6ffdd;
 $gradient-completion-skyblue: #4db2d2;
 $gradient-primary: linear-gradient(
@@ -28,3 +28,6 @@ $black-shadow: rgba(0, 0, 0, 0.2);
 $grid-width: 114rem;
 $grid-horizontal-space: 8rem;
 $grid-vertical-space: 4rem;
+
+/// CARDS
+$min-height-card: 43rem;

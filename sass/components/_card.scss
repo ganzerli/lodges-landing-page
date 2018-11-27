@@ -2,11 +2,11 @@
   perspective: 1000px;
   -moz-perspective: 1000px;
   position: relative;
-  min-height: 43rem; // because the card sides are absolute the height collapses, so the card needs a height itself, sae as side
+  min-height: $min-height-card; // because the card sides are absolute the height collapses, so the card needs a height itself, sae as side
   &-side {
-    min-height: 43rem;
+    min-height: $min-height-card;
     position: absolute;
-    width: 90%;
+    width: 80%;
     backface-visibility: hidden;
     transition: all 0.7s ease-in-out;
     border-radius: 3px;
@@ -149,6 +149,36 @@
     & li {
       padding: 1rem 2rem;
       border-top: solid 1px rgba(0, 0, 0, 0.2);
+    }
+  }
+  // back
+  &-wrap {
+    height: $min-height-card;
+    position: relative;
+    & a {
+      margin-top: 100%;
+    }
+    &:hover .card-price-title {
+      transform: translateX(0);
+    }
+  }
+  &-price {
+    font-size: 3.5rem;
+    color: white;
+    text-shadow: 0 0 0.5rem $black-shadow;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    & p {
+      padding: 1rem 0;
+    }
+    &-title {
+      transform: translateY(-20%);
+      transition: transform 0.3s ease-out;
+    }
+    &-money {
+      font-weight: 300;
     }
   }
 }
