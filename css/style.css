@@ -12,6 +12,18 @@
 .mb-2 {
   margin-bottom: 2rem; }
 
+.p-2 {
+  padding: 2rem; }
+
+.p-4 {
+  padding: 4rem; }
+
+.p-6 {
+  padding: 6rem; }
+
+.p-8 {
+  padding: 8rem; }
+
 @keyframes welcomeButton {
   0% {
     transform: scale(4, 0.3);
@@ -117,11 +129,11 @@ ul {
   list-style: none; }
 
 .gradient-bg {
-  background-image: linear-gradient(20deg, rgba(247, 121, 125, 0.6), rgba(251, 216, 134, 0.6), rgba(198, 255, 221, 0.6)); }
+  background-image: linear-gradient(20deg, rgba(247, 121, 125, 0.4), rgba(251, 216, 134, 0.4), rgba(198, 255, 221, 0.4)); }
 
 .header {
   height: 95vh;
-  background-image: linear-gradient(20deg, rgba(247, 121, 125, 0.6), rgba(251, 216, 134, 0.6), rgba(198, 255, 221, 0.6)), url(../img/backgroundHeader.jpg);
+  background-image: linear-gradient(20deg, rgba(247, 121, 125, 0.4), rgba(251, 216, 134, 0.4), rgba(198, 255, 221, 0.4)), url(../img/backgroundHeader.jpg);
   background-size: cover;
   background-position: top;
   /* stick image at top*/
@@ -197,25 +209,24 @@ ul {
     z-index: -1;
     transition: all 0.15s ease-out; }
 
-.text-btn:link, .text-btn:visited {
+.text-button:link, .text-button:visited {
   font-size: 1.5rem;
-  color: #f7797d;
+  color: #ec4f3a;
   display: inline-block;
   text-decoration: none;
   border-bottom: 1px solid #f7797d;
   padding: 3px;
-  text-shadow: 1px 1px 1px #fbd886, -1px -1px 1px #fbd886;
+  text-shadow: 1px 1px 1px #c6ffdd, -1px -1px 1px #c6ffdd;
   transition: all 0.2s; }
 
-.text-btn:hover {
+.text-button:hover {
   background-color: #fbd886;
   border: none;
-  color: #c6ffdd;
-  text-shadow: 1px 1px 1px #f7797d, -1px -1px 1px #f7797d;
+  color: #4db2d2;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
   transform: translateY(-3px); }
 
-.text-btn:active {
+.text-button:active {
   transform: translateY(-1px);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
@@ -279,7 +290,8 @@ ul {
   perspective: 1000px;
   -moz-perspective: 1000px;
   position: relative;
-  min-height: 43rem; }
+  min-height: 43rem;
+  transform: translateX(10%); }
   .card-side {
     min-height: 43rem;
     position: absolute;
@@ -373,6 +385,63 @@ ul {
     .card-price-money {
       font-weight: 300; }
 
+.review {
+  width: 75%;
+  margin: 1rem auto 8rem auto;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.2);
+  padding: 4rem 6rem;
+  font-size: 1.6rem;
+  transform: skewX(10deg);
+  background: white;
+  background-image: linear-gradient(20deg, rgba(247, 121, 125, 0.4), rgba(251, 216, 134, 0.4), rgba(198, 255, 221, 0.4)); }
+  .review-shape {
+    width: 15rem;
+    height: 15rem;
+    background-color: orange;
+    border-radius: 50%;
+    float: left;
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    transform: translateX(-20%) skewX(-10deg);
+    overflow: hidden;
+    position: relative; }
+    .review-shape img {
+      height: 110%;
+      transform: scale(1.2) translateX(-8%);
+      transition: all 0.5s; }
+  .review-text {
+    transform: skewX(-10deg);
+    text-shadow: -1px -1px 1px white; }
+    .review-text .comment {
+      font-weight: 400; }
+  .review-figcaption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    color: #fff;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: all 0.5s;
+    backface-visibility: hidden;
+    text-align: center; }
+  .review:hover .review-figcaption {
+    opacity: 1;
+    transform: translate(-50%, -50%); }
+  .review:hover .review-shape img {
+    transform: scale(1) translateX(-8%);
+    filter: blur(3px) brightness(70%); }
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1; }
+  .bg-video-item {
+    width: 100%; }
+
 .seciton-about {
   color: #888;
   background-color: #eee;
@@ -381,12 +450,12 @@ ul {
 
 .info-section {
   padding: 5rem 0;
-  background-image: linear-gradient(20deg, rgba(247, 121, 125, 0.6), rgba(251, 216, 134, 0.6), rgba(198, 255, 221, 0.6)), url("../img/alpine-section-features.jpg");
+  background-image: linear-gradient(20deg, rgba(247, 121, 125, 0.4), rgba(251, 216, 134, 0.4), rgba(198, 255, 221, 0.4)), url("../img/alpine-section-features.jpg");
   background-position: top left;
   margin-top: -10rem;
   transform: skewy(4deg); }
   .info-section > .row {
-    margin: 4rem 1rem;
+    margin: 4rem auto;
     transform: skewY(-4deg); }
 
 .section-offers {
@@ -394,6 +463,12 @@ ul {
   background-color: #eee;
   padding: 10rem 0;
   text-align: center;
-  margin-top: -7rem; }
+  margin-top: -6rem; }
   .section-offers > .row {
     margin: 0 auto; }
+
+.section-review {
+  padding: 2rem 0 4rem 0;
+  background: rgba(255, 255, 255, 0.5);
+  position: relative;
+  overflow: hidden; }

@@ -43,23 +43,22 @@
   }
 }
 
-.text-btn {
+.text-button {
   &:link,
   &:visited {
     font-size: 1.5rem;
-    color: $gradient-red;
+    color: $gradient-completion-red;
     display: inline-block;
     text-decoration: none;
     border-bottom: 1px solid $gradient-red;
     padding: 3px;
-    text-shadow: 1px 1px 1px $gradient-sand, -1px -1px 1px $gradient-sand;
+    text-shadow: 1px 1px 1px $gradient-skyblue, -1px -1px 1px $gradient-skyblue;
     transition: all 0.2s;
   }
   &:hover {
     background-color: $gradient-sand;
     border: none;
-    color: $gradient-skyblue;
-    text-shadow: 1px 1px 1px $gradient-red, -1px -1px 1px $gradient-red;
+    color: $gradient-completion-skyblue;
     box-shadow: 0 1rem 2rem $black-shadow;
     transform: translateY(-3px);
   }

@@ -3,6 +3,7 @@
   -moz-perspective: 1000px;
   position: relative;
   min-height: $min-height-card; // because the card sides are absolute the height collapses, so the card needs a height itself, sae as side
+  transform: translateX(10%); // to center it
   &-side {
     min-height: $min-height-card;
     position: absolute;
@@ -11,7 +12,6 @@
     transition: all 0.7s ease-in-out;
     border-radius: 3px;
     overflow: hidden;
-
     &-front {
       background-color: white;
     }

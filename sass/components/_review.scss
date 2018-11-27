@@ -1,0 +1,56 @@
+.review {
+  width: 75%;
+  margin: 1rem auto 8rem auto;
+  box-shadow: 0 3rem 6rem $black-shadow;
+  padding: 4rem 6rem;
+  font-size: 1.6rem; // 16 pixels
+  transform: skewX(10deg);
+  background: white;
+  background-image: $gradient-primary;
+  &-shape {
+    width: 15rem;
+    height: 15rem;
+    background-color: orange;
+    border-radius: 50%;
+    float: left;
+    shape-outside: circle(
+      50% at 50% 50%
+    ); // needs a floated obkect with defined width and height
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    transform: translateX(-20%) skewX(-10deg);
+    overflow: hidden;
+    position: relative;
+    & img {
+      height: 110%;
+      transform: scale(1.2) translateX(-8%);
+      transition: all 0.5s;
+    }
+  }
+  &-text {
+    transform: skewX(-10deg);
+    text-shadow: -1px -1px 1px white;
+    & .comment {
+      font-weight: 400;
+    }
+  }
+  &-figcaption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    color: $white;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: all 0.5s;
+    backface-visibility: hidden;
+    text-align: center;
+  }
+  &:hover &-figcaption {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+  &:hover &-shape img {
+    transform: scale(1) translateX(-8%);
+    filter: blur(3px) brightness(70%);
+  }
+}

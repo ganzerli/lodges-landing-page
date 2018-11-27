@@ -11,7 +11,7 @@
   margin-top: -10rem;
   transform: skewy(4deg);
   & > .row {
-    margin: 4rem 1rem;
+    margin: 4rem auto;
     transform: skewY(-4deg);
   }
 }
@@ -20,8 +20,15 @@
   background-color: $simil-white;
   padding: 10rem 0;
   text-align: center;
-  margin-top: -7rem;
+  margin-top: -6rem;
   & > .row {
     margin: 0 auto;
   }
+}
+
+.section-review {
+  padding: 2rem 0 4rem 0;
+  background: rgba($white, 0.5);
+  position: relative;
+  overflow: hidden;
 }
