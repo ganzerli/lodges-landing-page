@@ -27,8 +27,35 @@
 }
 
 .section-review {
-  padding: 2rem 0 4rem 0;
+  padding: 2rem 0 0 0;
   background: rgba($white, 0.5);
   position: relative;
   overflow: hidden;
+}
+.section-booking {
+  padding: 10rem 0;
+  height: 100vh;
+  margin-top: -1rem;
+  background-image: linear-gradient(
+    to bottom,
+    white,
+    rgb(221, 255, 255),
+    white
+  );
+}
+.booking {
+  box-shadow: 0 1rem 5rem $black-shadow;
+  background-image: linear-gradient(
+      105deg,
+      rgba($white, 0.8) 0%,
+      rgba($white, 0.5) 50%,
+      transparent 50%,
+      transparent 100%
+    ),
+    url(../img/alpine-section-features.jpg);
+  position: relative;
+  background-size: cover;
+  height: 50rem;
+  background-position: right;
+  border-radius: 2px;
 }
