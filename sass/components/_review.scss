@@ -1,11 +1,12 @@
 .review {
-  width: 75%;
+  width: 65%;
   margin: 1rem auto 8rem auto;
   box-shadow: 0 3rem 6rem $black-shadow;
   padding: 4rem 6rem;
   font-size: 1.6rem; // 16 pixels
   transform: skewX(10deg);
   background: white;
+  border-radius: 3px;
   background-image: $gradient-primary;
   &-shape {
     width: 15rem;

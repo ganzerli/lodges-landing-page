@@ -171,20 +171,64 @@ ul {
   .row .col-1-4 {
     width: calc((100% - 3 *4rem) / 4); }
 
+.footer {
+  background-color: #302f38;
+  position: relative;
+  padding: 2rem 0 0 0;
+  font-size: 1.3rem;
+  max-height: 25rem;
+  overflow: hidden; }
+  .footer > .row {
+    padding-bottom: 2rem !important; }
+  .footer-logo-box {
+    width: 10rem;
+    display: inline-block; }
+    .footer-logo-box img {
+      width: inherit;
+      opacity: 0.5;
+      border-radius: 2px;
+      transform: translateX(-50%); }
+  .footer-navigation {
+    border-top: 1px solid #c6ffdd;
+    padding: 2rem 0;
+    display: inline-block; }
+  .footer-item {
+    display: inline-block; }
+    .footer-item:not(:last-child) {
+      margin-right: 2rem; }
+  .footer-link:visited, .footer-link:link {
+    color: #c6ffdd;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: all 0.2s; }
+  .footer-link:hover, .footer-link:visited {
+    color: #c6ffdd;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    transform: rotate(5deg) scale(1.2); }
+  .footer-copyright {
+    padding: 2rem 0;
+    display: inline-block;
+    border-top: 1px solid #c6ffdd;
+    text-align: right; }
+    .footer-copyright strong {
+      padding-left: 2rem; }
+
 .button-animated {
   animation: welcomeButton 0.3s ease-out 1s;
   animation-fill-mode: backwards;
   /* it starts at 0% state */ }
-  .button-animated:link, .button-animated:visited {
+  .button-animated, .button-animated:link, .button-animated:visited {
     padding: 1rem 2rem;
     display: inline-block;
     font-weight: bolder;
     background-color: azure;
-    color: #556;
+    color: #302f38;
     font-size: 1.5rem;
     border-radius: 1rem;
     transition: all 0.2s ease-out;
-    position: relative; }
+    position: relative;
+    border: none;
+    cursor: pointer; }
   .button-animated:hover {
     transform: translateY(-0.2rem);
     box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2); }
@@ -192,10 +236,11 @@ ul {
       transform: scale(3, 0.5);
       opacity: 0;
       background: white; }
-  .button-animated:active {
+  .button-animated:active, .button-animated:focus {
     color: firebrick;
     transform: translateY(-0.1rem);
-    box-shadow: 0 0.4rem 0.3rem rgba(0, 0, 0, 0.2); }
+    box-shadow: 0 0.4rem 0.3rem rgba(0, 0, 0, 0.2);
+    outline: none; }
   .button-animated::after {
     content: "";
     display: inline-block;
@@ -386,13 +431,14 @@ ul {
       font-weight: 300; }
 
 .review {
-  width: 75%;
+  width: 65%;
   margin: 1rem auto 8rem auto;
   box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.2);
   padding: 4rem 6rem;
   font-size: 1.6rem;
   transform: skewX(10deg);
   background: white;
+  border-radius: 3px;
   background-image: linear-gradient(20deg, rgba(247, 121, 125, 0.4), rgba(251, 216, 134, 0.4), rgba(198, 255, 221, 0.4)); }
   .review-shape {
     width: 15rem;
@@ -440,12 +486,12 @@ ul {
   width: 100%;
   z-index: -1; }
   .bg-video-item {
-    width: 100%; }
+    height: 100%; }
 
 .form {
-  padding: 2rem 6rem; }
+  padding: 0 6rem; }
   .form-group:not(:last-child) {
-    margin-bottom: 4rem; }
+    margin-bottom: 2rem; }
   .form-input {
     font-size: 1.6rem;
     font-family: inherit;
@@ -465,7 +511,7 @@ ul {
     .form-input:focus:invalid {
       border-bottom: 3px solid #f7797d; }
     .form-input::-webkit-input-placeholder {
-      color: #556; }
+      color: #302f38; }
   .form-input:placeholder-shown + .form-label {
     opacity: 0;
     visibility: hidden;
@@ -477,6 +523,43 @@ ul {
     text-shadow: -1px -1px 1px white;
     display: block;
     transition: all 0.3s; }
+  .form-radio-group {
+    width: 20%;
+    display: inline-block;
+    margin-left: 1rem; }
+  .form-radio-label {
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    padding-left: 2rem;
+    margin-top: -5px;
+    color: #56c24d;
+    text-shadow: 1px 1px 1px darkgreen; }
+  .form-radio-button {
+    height: 3rem;
+    width: 3rem;
+    border: 5px solid #ffa023;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    left: -2.3rem;
+    top: -0.5rem; }
+    .form-radio-button::after {
+      content: "";
+      height: 1.3rem;
+      width: 1.3rem;
+      border-radius: 50%;
+      background-color: #ffa023;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(25%, 25%) scale(0);
+      transition: all 0.3s cubic-bezier(0.82, 0.04, 0.68, 1.53); }
+  .form-radio:checked ~ .form-radio-label .form-radio-button::after {
+    transform: translate(25%, 25%) scale(1); }
+  .form-radio {
+    visibility: hidden; }
 
 .seciton-about {
   color: #888;
@@ -510,8 +593,7 @@ ul {
   overflow: hidden; }
 
 .section-booking {
-  padding: 10rem 0;
-  height: 100vh;
+  padding: 10rem 0 2rem 0;
   margin-top: -1rem;
   background-image: linear-gradient(to bottom, white, #ddffff, white); }
 
