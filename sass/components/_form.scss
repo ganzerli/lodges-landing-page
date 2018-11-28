@@ -1,0 +1,47 @@
+.form {
+  padding: 2rem 6rem;
+  &-group:not(:last-child) {
+    margin-bottom: 4rem;
+  }
+  &-input {
+    font-size: 1.6rem;
+    font-family: inherit;
+    font-weight: 400;
+    text-shadow: 1px 1px 1px $gradient-sand;
+    color: inherit;
+    padding: 1.5rem 2rem;
+    border-radius: 2px;
+    border: none;
+    background-color: rgba($white, 0.7);
+    width: 33%;
+    transition: all 0.3s;
+    &:focus {
+      outline: none;
+      box-shadow: 0 1rem 1.5rem $black-shadow;
+      border-bottom: 3px solid rgb(65, 246, 65);
+    }
+    &:focus:invalid {
+      border-bottom: 3px solid $gradient-red;
+    }
+    &::-webkit-input-placeholder {
+      // if the color of the placeholder should be different
+      color: $grey-blue;
+    }
+  }
+
+  &-input:placeholder-shown + &-label {
+    // selecting the direct sibling of the label, direct after the input
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem);
+  }
+
+  &-label {
+    font-weight: 800;
+    font-size: 1.4rem;
+    margin: 1rem auto auto 2rem;
+    text-shadow: -1px -1px 1px white;
+    display: block;
+    transition: all 0.3s;
+  }
+}
