@@ -227,7 +227,8 @@ ul {
   z-index: 7;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  cursor: pointer; }
 
 .navigation-background {
   height: 6rem;
@@ -246,17 +247,21 @@ ul {
   position: fixed;
   top: 50%;
   left: 50%;
-  width: 50rem;
+  width: 40rem;
   height: 0px;
-  transform: translateY(-15rem);
+  transform: translateY(-15rem) translateX(1000px);
   opacity: 0;
+  z-index: 10;
   display: block;
-  transition: opacity 0.8s; }
+  transition: opacity 0.5s 0.1s, transform 0.4s ease-in; }
 
 .navigation-list {
   position: absolute;
   text-align: center;
   transform: translateX(-50%); }
+
+.navigation-item {
+  display: block; }
 
 .navigation-link {
   display: inline-block;
@@ -278,7 +283,42 @@ ul {
 .navigation-checkbox:checked ~ .navigation-nav {
   opacity: 1;
   height: 100%;
-  z-index: 10; }
+  transform: translateX(0) translateY(-15rem); }
+
+.navigation-icon {
+  position: relative; }
+  .navigation-icon, .navigation-icon::before, .navigation-icon::after {
+    content: "";
+    width: 3rem;
+    height: 3px;
+    background: #888;
+    display: inline-block;
+    border-radius: 3px;
+    transition: all 0.3s; }
+  .navigation-icon::before, .navigation-icon::after {
+    content: "";
+    position: absolute;
+    transition: all 0.3s; }
+  .navigation-icon::before {
+    transform: translateY(-0.75rem); }
+  .navigation-icon::after {
+    transform: translateY(0.75rem); }
+
+.navigation-button:hover .navigation-icon::before {
+  transform: translateY(-0.9rem); }
+
+.navigation-button:hover .navigation-icon::after {
+  transform: translateY(0.9rem); }
+
+.navigation-checkbox:checked + .navigation-button .navigation-icon {
+  background: transparent;
+  transform: rotate(180deg); }
+
+.navigation-checkbox:checked + .navigation-button .navigation-icon::before {
+  transform: translateY(0) rotate(45deg); }
+
+.navigation-checkbox:checked + .navigation-button .navigation-icon:after {
+  transform: translateY(0) rotate(-45deg); }
 
 .button-animated {
   animation: welcomeButton 0.3s ease-out 1s;
