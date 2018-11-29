@@ -213,6 +213,73 @@ ul {
     .footer-copyright strong {
       padding-left: 2rem; }
 
+.navigation-checkbox {
+  display: none; }
+
+.navigation-button {
+  background: radial-gradient(#fff, #fff, #aaa);
+  height: 7rem;
+  width: 7rem;
+  position: fixed;
+  top: 6rem;
+  right: 6rem;
+  border-radius: 50%;
+  z-index: 7;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.navigation-background {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 6.5rem;
+  right: 6.5rem;
+  background-image: radial-gradient(#fbd886, #4db2d2, #f7797d);
+  z-index: 5;
+  transition: all 0.5s ease-in-out; }
+
+.navigation-nav {
+  text-align: center;
+  z-index: -1;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 50rem;
+  height: 0px;
+  transform: translateY(-15rem);
+  opacity: 0;
+  display: block;
+  transition: opacity 0.8s; }
+
+.navigation-list {
+  position: absolute;
+  text-align: center;
+  transform: translateX(-50%); }
+
+.navigation-link {
+  display: inline-block;
+  font-size: 3rem;
+  color: #fff;
+  font-weight: 300;
+  text-transform: uppercase;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, white 50%);
+  padding: 1rem 2rem;
+  background-size: 230%;
+  transition: all 0.3s; }
+  .navigation-link:hover, .navigation-link:active {
+    background-position: 100%;
+    color: #4db2d2; }
+
+.navigation-checkbox:checked ~ .navigation-background {
+  transform: scale(70); }
+
+.navigation-checkbox:checked ~ .navigation-nav {
+  opacity: 1;
+  height: 100%;
+  z-index: 10; }
+
 .button-animated {
   animation: welcomeButton 0.3s ease-out 1s;
   animation-fill-mode: backwards;

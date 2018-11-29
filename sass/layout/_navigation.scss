@@ -1,0 +1,87 @@
+.navigation {
+  &-checkbox {
+    display: none;
+  }
+  &-button {
+    background: radial-gradient(#fff, $white, #aaa);
+    height: 7rem;
+    width: 7rem;
+    position: fixed;
+    top: 6rem;
+    right: 6rem;
+    border-radius: 50%;
+    z-index: 7;
+    display: flex; // to center the text
+    align-items: center;
+    justify-content: center;
+  }
+  &-background {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 6.5rem;
+    right: 6.5rem;
+    background-image: radial-gradient(
+      $gradient-sand,
+      $gradient-completion-skyblue,
+      $gradient-red
+    );
+    z-index: 5;
+    transition: all 0.5s ease-in-out;
+  }
+  &-nav {
+    text-align: center;
+    z-index: -1;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 50rem;
+    height: 0px;
+    transform: translateY(-15rem);
+    opacity: 0;
+    display: block;
+    transition: opacity 0.8s;
+  }
+  &-list {
+    position: absolute;
+    text-align: center;
+    transform: translateX(-50%);
+  }
+  &-item {
+  }
+  &-link {
+    display: inline-block;
+    font-size: 3rem;
+    color: $white;
+    font-weight: 300;
+    text-transform: uppercase;
+    background-image: linear-gradient(
+      120deg,
+      transparent 0%,
+      transparent 50%,
+      white 50%
+    );
+    padding: 1rem 2rem;
+    background-size: 230%;
+    transition: all 0.3s;
+    // the slice now starts at the end because background is double
+    &:hover,
+    &:active {
+      // the positon of the background is changed so the background slides to the left, because backgr starts at the end as origin
+      background-position: 100%;
+      color: $gradient-completion-skyblue;
+    }
+  }
+  &-checkbox:checked ~ &-background {
+    transform: scale(70);
+  }
+  &-checkbox:checked ~ &-nav {
+    opacity: 1;
+    height: 100%;
+    z-index: 10;
+  }
+  // ---- MENU BUTTON ICON ----
+  &-icon {
+  }
+}
