@@ -2,6 +2,18 @@
   position: relative;
   width: 100%;
   border: 1px solid transparent; /*to give a width, or it behaves as if the gallery div does not exists*/
+
+  @include responsiveFor(tab-portrait) {
+    position: relative;
+    max-width: 70%;
+    transform: translate(25%, 13rem);
+  }
+  @include responsiveFor(phone) {
+    position: relative;
+    max-width: 80%;
+    transform: translate(20%, 17rem);
+  }
+
   &-photo {
     width: 50%;
     position: absolute;
@@ -19,6 +31,9 @@
     &-2 {
       left: 25%;
       top: 2rem;
+      @include responsiveFor(tab-portrait) {
+        top: 21rem;
+      }
     }
     &-3 {
       left: 52%;
@@ -29,6 +44,10 @@
       box-shadow: 0 2.5rem 4rem $black-shadow;
       outline: 1.5rem solid $gradient-skyblue;
       z-index: 10;
+    }
+
+    @include responsiveFor(phone) {
+      width: 60%;
     }
   }
   /* when hovering the entire section the .gallery-photo not hovered get affected*/

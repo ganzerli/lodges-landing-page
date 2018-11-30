@@ -4,6 +4,13 @@
   margin-bottom: $grid-horizontal-space;
   &:not(:last-child) {
     margin-bottom: $grid-horizontal-space;
+    @include responsiveFor(tab-portrait) {
+      margin-bottom: $grid-small-space; // so to overwrite the stuff below
+    }
+  }
+
+  @include responsiveFor(tab-portrait) {
+    max-width: 70%;
   }
 
   @include clearfix;
@@ -13,6 +20,14 @@
     float: left;
     &:not(:last-child) {
       margin-right: $grid-vertical-space;
+      @include responsiveFor(tab-portrait) {
+        margin-right: 0;
+      }
+    }
+
+    @include responsiveFor(tab-portrait) {
+      width: 100% !important; // so to overwrite the stuff below
+      margin: 2rem 0;
     }
   }
 

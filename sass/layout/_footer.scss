@@ -18,7 +18,9 @@
       transform: translateX(-50%);
     }
   }
-
+  @include responsiveFor(phone) {
+    max-height: 40rem;
+  }
   &-navigation {
     border-top: 1px solid $gradient-skyblue;
     padding: 2rem 0;

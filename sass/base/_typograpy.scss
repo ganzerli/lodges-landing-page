@@ -19,16 +19,20 @@ a {
     text-transform: uppercase;
     backface-visibility: hidden; /* css trick to fix the animation end in the childrens */
     margin-bottom: 3rem;
+    letter-spacing: 1.5rem;
+    @include responsiveFor(phone) {
+      letter-spacing: 5px;
+    }
     &-big {
       display: block; /* takes the whole width */
       font-size: 4rem;
-      letter-spacing: 0.5rem;
+
       animation: welcomeLeft 1s ease;
     }
     &-small {
       display: block;
       font-size: 2rem;
-      letter-spacing: 1rem;
+
       animation: welcomeUp 1.5s ease;
     }
   }
@@ -56,10 +60,16 @@ a {
   letter-spacing: 2px;
   text-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.1);
   transition: all 0.3s;
+  @include responsiveFor(tab-landscape) {
+    padding: 0 4rem;
+  }
   &:hover {
     transform: skewY(-1deg) skewX(1deg) scale(1.01, 1.01);
     letter-spacing: 4px;
     text-shadow: 0.5rem 1rem 2rem $black-shadow;
+    @include responsiveFor(tab-landscape) {
+      letter-spacing: 2px;
+    }
   }
 }
 .tertiary-header {

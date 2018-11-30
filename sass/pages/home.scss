@@ -1,8 +1,26 @@
-.seciton-about {
+.section-about {
   color: $gray-text;
   background-color: $simil-white;
-  padding: 18rem 0; // to have space pushing up the section
-  margin-top: -25vh;
+  padding: 16rem 0; // to have space pushing up the section
+  margin-top: -20rem;
+  min-height: 90rem;
+  @include responsiveFor(tab-landscape) {
+    padding: 20rem 0 15rem 0;
+    text-align: center;
+  }
+  @include responsiveFor(phone) {
+    padding: 20rem 0 10rem 0;
+  }
+  & .if-mobile {
+    @include responsiveFor(tab-portrait) {
+      display: none;
+    }
+  }
+  & .row {
+    @include responsiveFor(tab-portrait) {
+      margin-top: -6rem;
+    }
+  }
 }
 .info-section {
   padding: 5rem 0;
@@ -57,4 +75,7 @@
   height: 50rem;
   background-position: right;
   border-radius: 2px;
+}
+section {
+  overflow: hidden;
 }

@@ -1,0 +1,89 @@
+.popup {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 20;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s;
+
+  &:target {
+    // popup becomes the target after clicking the anchor button in the card, is spacifyed in the href, same id as the .popuo class
+    opacity: 1;
+    visibility: visible;
+  }
+  &:target &-content {
+    // when popup becomes the target, the content get affected
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  &-content {
+    opacity: 0;
+    transform: scale(0.5);
+    position: relative;
+    width: 70%;
+    height: 0;
+    background-color: $white;
+    margin: 10% auto;
+    display: table;
+    border-radius: 3px;
+    overflow: hidden;
+    transition: all 0.4s;
+  }
+
+  &-left {
+    width: 33.3333%;
+    display: table-cell;
+  }
+  &-right {
+    width: 66.6666%;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 3rem 5rem;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  &-img {
+    display: block;
+    min-height: 25%;
+    width: 100%;
+  }
+  &-text {
+    font-size: 1.4rem;
+    margin-bottom: 4rem;
+
+    column-count: 2;
+    column-gap: 4rem;
+
+    column-rule: 1px solid rgba(0, 0, 0, 0.2);
+    -moz-column-rule: 1px solid rgba(0, 0, 0, 0.2);
+    -ms-column-rule: 1px solid rgba(0, 0, 0, 0.2);
+    -webkit-column-rule: 1px solid rgba(0, 0, 0, 0.2);
+
+    hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
+  }
+
+  &-close {
+    &:link,
+    &:visited {
+      color: $grey-blue;
+      font-size: 3rem;
+      position: absolute;
+      text-outline: 2.5rem;
+      right: 3rem;
+      top: 2.5rem;
+      display: block;
+      transition: all 0.3s;
+      line-height: 1;
+    }
+    &:hover {
+      color: $gradient-completion-skyblue;
+    }
+  }
+}

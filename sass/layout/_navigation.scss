@@ -15,6 +15,13 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    @include responsiveFor(phone) {
+      height: 5rem;
+      width: 5rem;
+      top: 2rem;
+      right: 2rem;
+      width: 5rem;
+    }
   }
   &-background {
     height: 6rem;
@@ -30,6 +37,12 @@
     );
     z-index: 5;
     transition: all 0.5s ease-in-out;
+    @include responsiveFor(phone) {
+      height: 5rem;
+      width: 5rem;
+      top: 2rem;
+      right: 2rem;
+    }
   }
   &-nav {
     text-align: center;
