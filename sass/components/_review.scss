@@ -9,7 +9,7 @@
   border-radius: 3px;
   background-image: $gradient-primary;
   @include responsiveFor(tablet-portrait) {
-    padding: 2rem 5rem;
+    padding: 1rem 5rem;
   }
   &-shape {
     width: 12rem;
