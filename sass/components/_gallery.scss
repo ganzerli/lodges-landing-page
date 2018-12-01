@@ -11,7 +11,7 @@
   @include responsiveFor(phone) {
     position: relative;
     max-width: 80%;
-    transform: translate(20%, 17rem);
+    transform: translate(10%, 17rem);
   }
 
   &-photo {

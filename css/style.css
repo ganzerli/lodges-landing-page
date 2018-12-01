@@ -92,15 +92,17 @@ a {
     .primary-header-container .primary-header-big {
       display: block;
       /* takes the whole width */
-      font-size: 4rem;
+      font-size: 5.2rem;
+      line-height: 0.8;
       animation: welcomeLeft 1s ease; }
     .primary-header-container .primary-header-small {
       display: block;
-      font-size: 2rem;
+      font-size: 1.5rem;
+      padding-top: 1rem;
       animation: welcomeUp 1.5s ease; }
 
 .secondary-header {
-  font-size: 3.5rem;
+  font-size: 4.2rem;
   text-transform: uppercase;
   font-weight: 900;
   text-align: center;
@@ -118,7 +120,7 @@ a {
   transition: all 0.3s; }
   @media (max-width: 75em) {
     .secondary-header {
-      padding: 0 4rem; } }
+      padding: 1rem 4rem; } }
   .secondary-header:hover {
     transform: skewY(-1deg) skewX(1deg) scale(1.01, 1.01);
     letter-spacing: 4px;
@@ -533,7 +535,7 @@ ul {
     .gallery {
       position: relative;
       max-width: 80%;
-      transform: translate(20%, 17rem); } }
+      transform: translate(10%, 17rem); } }
   .gallery-photo {
     width: 50%;
     position: absolute;
@@ -570,7 +572,7 @@ ul {
   position: relative;
   width: 100%;
   border-radius: 3px;
-  background: rgba(238, 238, 238, 0.7);
+  background: rgba(250, 250, 250, 0.7);
   text-align: center;
   padding: 1rem;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
@@ -700,8 +702,8 @@ ul {
   border-radius: 3px;
   background-image: linear-gradient(20deg, rgba(247, 121, 125, 0.4), rgba(251, 216, 134, 0.4), rgba(198, 255, 221, 0.4)); }
   .review-shape {
-    width: 15rem;
-    height: 15rem;
+    width: 12rem;
+    height: 12rem;
     background-color: orange;
     border-radius: 50%;
     float: left;
@@ -718,7 +720,8 @@ ul {
     transform: skewX(-10deg);
     text-shadow: -1px -1px 1px white; }
     .review-text .comment {
-      font-weight: 400; }
+      font-weight: 400;
+      max-height: 15rem; }
   .review-figcaption {
     position: absolute;
     top: 50%;
@@ -825,17 +828,18 @@ ul {
 
 .section-about {
   color: #888;
-  background-color: #eee;
+  background-color: #fafafa;
   padding: 16rem 0;
   margin-top: -20rem;
   min-height: 90rem; }
   @media (max-width: 75em) {
     .section-about {
-      padding: 20rem 0 15rem 0;
-      text-align: center; } }
+      padding: 20rem 0 25rem 0;
+      text-align: center;
+      margin-bottom: 5rem; } }
   @media (max-width: 37.5em) {
     .section-about {
-      padding: 20rem 0 10rem 0; } }
+      padding: 20rem 0 25rem 0; } }
   @media (max-width: 56.25em) {
     .section-about .if-mobile {
       display: none; } }
@@ -855,7 +859,7 @@ ul {
 
 .section-offers {
   color: #888;
-  background-color: #eee;
+  background-color: #fafafa;
   padding: 10rem 0;
   text-align: center;
   margin-top: -6rem; }

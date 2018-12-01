@@ -8,9 +8,12 @@
   background: white;
   border-radius: 3px;
   background-image: $gradient-primary;
+  @include responsiveFor(tablet-portrait) {
+    padding: 2rem 5rem;
+  }
   &-shape {
-    width: 15rem;
-    height: 15rem;
+    width: 12rem;
+    height: 12rem;
     background-color: orange;
     border-radius: 50%;
     float: left;
@@ -32,6 +35,7 @@
     text-shadow: -1px -1px 1px white;
     & .comment {
       font-weight: 400;
+      max-height: 15rem;
     }
   }
   &-figcaption {

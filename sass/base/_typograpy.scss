@@ -25,21 +25,21 @@ a {
     }
     &-big {
       display: block; /* takes the whole width */
-      font-size: 4rem;
-
+      font-size: 5.2rem;
+      line-height: 0.8;
       animation: welcomeLeft 1s ease;
     }
     &-small {
       display: block;
-      font-size: 2rem;
-
+      font-size: 1.5rem;
+      padding-top: 1rem;
       animation: welcomeUp 1.5s ease;
     }
   }
 }
 
 .secondary-header {
-  font-size: 3.5rem;
+  font-size: 4.2rem;
   text-transform: uppercase;
   font-weight: 900;
   text-align: center;
@@ -61,7 +61,7 @@ a {
   text-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.1);
   transition: all 0.3s;
   @include responsiveFor(tab-landscape) {
-    padding: 0 4rem;
+    padding: 1rem 4rem;
   }
   &:hover {
     transform: skewY(-1deg) skewX(1deg) scale(1.01, 1.01);

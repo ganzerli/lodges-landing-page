@@ -5,11 +5,12 @@
   margin-top: -20rem;
   min-height: 90rem;
   @include responsiveFor(tab-landscape) {
-    padding: 20rem 0 15rem 0;
+    padding: 20rem 0 25rem 0;
     text-align: center;
+    margin-bottom: 5rem;
   }
   @include responsiveFor(phone) {
-    padding: 20rem 0 10rem 0;
+    padding: 20rem 0 25rem 0;
   }
   & .if-mobile {
     @include responsiveFor(tab-portrait) {
