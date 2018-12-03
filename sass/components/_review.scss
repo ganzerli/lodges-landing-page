@@ -7,9 +7,17 @@
   transform: skewX(10deg);
   background: white;
   border-radius: 3px;
-  background-image: $gradient-primary;
+  background-image: $gradient-cold;
+  overflow: hidden;
   @include responsiveFor(tablet-portrait) {
-    padding: 1rem 5rem;
+    padding: 3rem 5rem;
+  }
+
+  &-opt {
+    @include responsiveFor(phone) {
+      color: transparent;
+      visibility: hidden;
+    }
   }
   &-shape {
     width: 12rem;
@@ -35,7 +43,11 @@
     text-shadow: -1px -1px 1px white;
     & .comment {
       font-weight: 400;
+      min-width: 28rem;
       max-height: 15rem;
+      @include responsiveFor(tab-portrait) {
+        margin-bottom: 2rem;
+      }
     }
   }
   &-figcaption {

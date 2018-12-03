@@ -3,6 +3,7 @@
   &-group:not(:last-child) {
     margin-bottom: 2rem;
   }
+
   &-input {
     font-size: 1.6rem;
     font-family: inherit;
@@ -13,8 +14,11 @@
     border-radius: 2px;
     border: none;
     background-color: rgba($white, 0.7);
-    width: 33%;
+    width: 40%;
     transition: all 0.3s;
+    @include responsiveFor(tab-portrait) {
+      width: calc(100vw - 150% + 40%);
+    }
     &:focus {
       outline: none;
       box-shadow: 0 1rem 1.5rem $black-shadow;
@@ -48,6 +52,11 @@
     width: 20%;
     display: inline-block;
     margin-left: 1rem;
+    &:last-child {
+      @include responsiveFor(tab-portrait) {
+        margin-left: 50%;
+      }
+    }
   }
   &-radio-label {
     font-size: $font-16;
@@ -79,6 +88,10 @@
       left: 0;
       transform: translate(25%, 25%) scale(0);
       transition: all 0.3s cubic-bezier(0.82, 0.04, 0.68, 1.53);
+      @include responsiveFor(tab-portrait) {
+        height: 1.2rem;
+        width: 1.2rem;
+      }
     }
   }
   &-radio:checked ~ &-radio-label &-radio-button::after {
@@ -91,5 +104,6 @@
   & button {
     box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.2);
     border: 1px solid #b0deb0;
+    margin-bottom: 4rem;
   }
 }
