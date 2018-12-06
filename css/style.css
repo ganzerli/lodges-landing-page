@@ -703,6 +703,9 @@ ul {
   background-image: linear-gradient(10deg, rgba(192, 233, 240, 0.5), rgba(255, 223, 180, 0.5));
   overflow: hidden; }
   @media (max-width: 37.5em) {
+    .review {
+      transform: skewX(2deg); } }
+  @media (max-width: 37.5em) {
     .review-opt {
       color: transparent;
       visibility: hidden; } }
@@ -714,19 +717,25 @@ ul {
     float: left;
     shape-outside: circle(50% at 50% 50%);
     -webkit-shape-outside: circle(50% at 50% 50%);
-    transform: translateX(-20%) skewX(-10deg);
     overflow: hidden;
-    position: relative; }
+    position: relative;
+    transform: translateX(-20%) skewX(-10deg); }
+    @media (max-width: 37.5em) {
+      .review-shape {
+        transform: translateX(-20%) skewX(-2deg); } }
     .review-shape img {
       height: 110%;
       transform: scale(1.2) translateX(-8%);
       transition: all 0.5s; }
   .review-text {
     transform: skewX(-10deg);
-    text-shadow: -1px -1px 1px white; }
+    text-shadow: -1px -1px 1px white;
+    min-width: 17rem; }
+    @media (max-width: 37.5em) {
+      .review-text {
+        transform: skewX(-2deg) translateX(-10%); } }
     .review-text .comment {
       font-weight: 400;
-      min-width: 28rem;
       max-height: 15rem; }
       @media (max-width: 56.25em) {
         .review-text .comment {

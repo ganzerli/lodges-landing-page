@@ -13,6 +13,10 @@
     padding: 3rem 5rem;
   }
 
+  @include responsiveFor(phone) {
+    transform: skewX(2deg);
+  }
+
   &-opt {
     @include responsiveFor(phone) {
       color: transparent;
@@ -29,9 +33,12 @@
       50% at 50% 50%
     ); // needs a floated obkect with defined width and height
     -webkit-shape-outside: circle(50% at 50% 50%);
-    transform: translateX(-20%) skewX(-10deg);
     overflow: hidden;
     position: relative;
+    transform: translateX(-20%) skewX(-10deg);
+    @include responsiveFor(phone) {
+      transform: translateX(-20%) skewX(-2deg);
+    }
     & img {
       height: 110%;
       transform: scale(1.2) translateX(-8%);
@@ -41,9 +48,12 @@
   &-text {
     transform: skewX(-10deg);
     text-shadow: -1px -1px 1px white;
+    min-width: 18rem;
+    @include responsiveFor(phone) {
+      transform: skewX(-2deg) translateX(-10%);
+    }
     & .comment {
       font-weight: 400;
-      min-width: 28rem;
       max-height: 15rem;
       @include responsiveFor(tab-portrait) {
         margin-bottom: 2rem;
