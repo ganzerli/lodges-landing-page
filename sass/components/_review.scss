@@ -50,7 +50,7 @@
     text-shadow: -1px -1px 1px white;
     min-width: 18rem;
     @include responsiveFor(phone) {
-      transform: skewX(-2deg) translateX(-10%);
+      transform: skewX(-2deg);
     }
     & .comment {
       font-weight: 400;

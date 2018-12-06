@@ -12,6 +12,7 @@
     transition: all 0.7s ease-in-out;
     border-radius: 3px;
     overflow: hidden;
+    box-shadow: 0 0 3rem -0.5rem $black-shadow;
     &-front {
       background-color: white;
     }

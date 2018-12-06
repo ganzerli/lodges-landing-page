@@ -37,6 +37,11 @@
 .section-offers {
   color: $gray-text;
   background-color: $simil-white;
+  background: linear-gradient(
+    20deg,
+    rgba(0, 255, 255, 0.5),
+    rgba(51, 255, 0, 0.5)
+  );
   padding: 10rem 0;
   text-align: center;
   margin-top: -6rem;
@@ -75,13 +80,11 @@
   background-size: cover;
   background-position: right;
   border-radius: 2px;
-  @include responsiveFor(tab-landscape) {
+  @include responsiveFor(tab-portrait) {
     background-image: linear-gradient(
         105deg,
         rgba($white, 0.8) 0%,
-        rgba($white, 0.5) 70%,
-        transparent 70%,
-        transparent 100%
+        rgba($white, 0.5) 100%
       ),
       url(../img/alpine-section-features.jpg);
   }
