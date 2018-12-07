@@ -139,14 +139,20 @@
   &-descr {
     position: relative;
     display: block;
-    font-size: 1.3rem;
     width: 70%;
     margin: 20rem auto 1rem auto;
+    font-size: 1.4rem;
+    font-weight: 800;
+    padding: 2rem 0;
   }
   &-list {
+    font-size: 1.4rem;
     width: 70%;
     margin: 0 auto;
     padding: 0.5rem;
+    font-style: oblique;
+    text-transform: capitalize;
+    font-weight: 600;
     & li {
       padding: 1rem 2rem;
       border-top: solid 1px rgba(0, 0, 0, 0.2);
@@ -238,7 +244,7 @@
       background-position: center;
       background-blend-mode: overlay;
       position: absolute;
-      height: 35%;
+      height: 32%;
       width: 100%;
       -webkit-clip-path: polygon(
         0 0,
@@ -321,20 +327,31 @@
       }
     }
     &-descr {
+      font-size: 2rem;
       position: relative;
       display: block;
       font-size: 1.5rem;
       width: 70%;
       margin: 34rem auto 1rem auto;
+      @include responsiveFor(tab-portrait) {
+        font-size: 2rem;
+      }
     }
     &-list {
       width: 70%;
       margin: 0 auto;
       padding: 0.5rem;
+      font-size: 2rem;
       font-size: 1.5rem;
+      font-style: oblique;
+      text-transform: capitalize;
+      font-weight: 600;
       & li {
         padding: 1rem 2rem;
         border-top: solid 1px rgba(0, 0, 0, 0.2);
+      }
+      @include responsiveFor(tab-portrait) {
+        font-size: 2rem;
       }
     }
     // back

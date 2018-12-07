@@ -3,7 +3,7 @@
   margin: 1rem auto 8rem auto;
   box-shadow: 0 3rem 6rem $black-shadow;
   padding: 4rem 6rem;
-  font-size: 1.6rem; // 16 pixels
+  font-size: 1.8rem; // 18px;
   transform: skewX(10deg);
   background: white;
   border-radius: 3px;
@@ -18,9 +18,13 @@
   }
 
   &-opt {
+    position: relative;
+    display: block;
     @include responsiveFor(phone) {
       color: transparent;
       visibility: hidden;
+      height: 0px;
+      position: absolute;
     }
   }
   &-shape {
@@ -58,7 +62,8 @@
       font-weight: 400;
       max-height: 15rem;
       @include responsiveFor(tab-portrait) {
-        font-size: 1.8rem;
+        font-size: 2rem;
+        height: calc(100% -2rem);
       }
     }
   }

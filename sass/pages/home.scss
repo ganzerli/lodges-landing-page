@@ -11,6 +11,7 @@
   }
   @include responsiveFor(phone) {
     padding: 20rem 0 25rem 0;
+    font-size: 2rem;
   }
   & .if-mobile {
     @include responsiveFor(tab-portrait) {
@@ -20,6 +21,19 @@
   & .row {
     @include responsiveFor(tab-portrait) {
       margin-top: -6rem;
+    }
+  }
+  &-presentation {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+    @include responsiveFor(tab-landscape) {
+      font-size: 1.8rem;
+    }
+    @include responsiveFor(tab-portrait) {
+      font-size: 2rem;
     }
   }
 }
@@ -37,11 +51,8 @@
 .section-offers {
   color: $gray-text;
   background-color: $simil-white;
-  background: linear-gradient(
-    20deg,
-    rgba(0, 255, 255, 0.2),
-    rgba(51, 255, 0, 0.2)
-  );
+  background: whitesmoke;
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   padding: 10rem 0;
   text-align: center;
   margin-top: -6rem;
@@ -49,7 +60,6 @@
     margin: 0 auto;
   }
 }
-
 .section-review {
   padding: 2rem 0 0 0;
   background: rgba($white, 0.5);

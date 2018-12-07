@@ -6,12 +6,12 @@
   @include responsiveFor(tab-portrait) {
     position: relative;
     max-width: 70%;
-    transform: translate(25%, 13rem);
+    transform: translate(25%, 15rem);
   }
   @include responsiveFor(phone) {
     position: relative;
     max-width: 80%;
-    transform: translate(10%, 17rem);
+    transform: translate(10%, 25rem);
   }
 
   &-photo {
@@ -42,7 +42,7 @@
     &:hover {
       transform: scale(1.05);
       box-shadow: 0 2.5rem 4rem $black-shadow;
-      outline: 1.5rem solid $gradient-skyblue;
+      outline: 1.5rem solid $gradient-red;
       z-index: 10;
     }
 
