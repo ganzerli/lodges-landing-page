@@ -51,12 +51,14 @@
     min-width: 18rem;
     @include responsiveFor(phone) {
       transform: skewX(-2deg);
+      font-size: 1.8rem;
     }
     & .comment {
+      color: rgb(44, 44, 44);
       font-weight: 400;
       max-height: 15rem;
       @include responsiveFor(tab-portrait) {
-        margin-bottom: 2rem;
+        font-size: 1.8rem;
       }
     }
   }

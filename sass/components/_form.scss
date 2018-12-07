@@ -108,6 +108,12 @@
   & button {
     box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.2);
     border: 1px solid #b0deb0;
-    margin-bottom: 4rem;
+    margin: 2rem auto;
+  }
+
+  &-mobile-center {
+    @include responsiveFor(tab-portrait) {
+      text-align: center;
+    }
   }
 }

@@ -17,6 +17,9 @@
     // Style specific for <button>
     border: none;
     cursor: pointer;
+    @include responsiveFor(tab-portrait) {
+      font-size: 1.8rem;
+    }
   }
   &:hover {
     transform: translateY(-0.2rem);

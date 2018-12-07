@@ -9,7 +9,9 @@
   opacity: 0;
   visibility: hidden;
   transition: all 0.4s;
-
+  @include responsiveFor(tab-portrait) {
+    text-align: center;
+  }
   &:target {
     // popup becomes the target after clicking the anchor button in the card, is spacifyed in the href, same id as the .popuo class
     opacity: 1;
@@ -38,6 +40,9 @@
   &-left {
     width: 33.3333%;
     display: table-cell;
+    @include responsiveFor(tab-portrait) {
+      width: 0;
+    }
   }
   &-right {
     width: 66.6666%;
@@ -45,6 +50,9 @@
     vertical-align: middle;
     padding: 3rem 5rem;
     background-color: rgba(0, 0, 0, 0.1);
+    @include responsiveFor(tab-portrait) {
+      width: 100%;
+    }
   }
   &-img {
     display: block;
@@ -52,6 +60,7 @@
     width: 100%;
   }
   &-text {
+    text-align: justify;
     font-size: 1.4rem;
     margin-bottom: 4rem;
 
@@ -85,5 +94,9 @@
     &:hover {
       color: $gradient-completion-skyblue;
     }
+  }
+
+  & .button-animated {
+    box-shadow: 0 0 3px 2px rgb(61, 253, 27);
   }
 }

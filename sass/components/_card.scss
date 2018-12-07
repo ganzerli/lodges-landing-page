@@ -182,4 +182,190 @@
       font-weight: 300;
     }
   }
+  // SAME FOR MEDIA SCREEN              MEDIA         MEADIA            MEDIA           MEADIA          MEADIA        MEADIA       MEADIA
+  @include responsiveFor(tab-portrait) {
+    &-side {
+      min-height: 10rem;
+      height: auto;
+      position: relative;
+      width: 80%;
+      overflow: hidden;
+      border-radius: 3px;
+      box-shadow: 0 0 3rem -0.5rem $black-shadow;
+      &-front {
+        background-color: white;
+        padding-bottom: 30rem;
+      }
+      &-back {
+        margin-top: -28rem;
+        background-color: white;
+        transform: rotateY(0deg);
+        border-radius: 0 0 3px 3px;
+        clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+        box-shadow: 0 0 3rem -0.5rem $black-shadow;
+        &1 {
+          background-image: linear-gradient(
+            25deg,
+            $gradient-skyblue,
+            $gradient-completion-skyblue
+          );
+        }
+        &2 {
+          background-image: linear-gradient(
+            25deg,
+            $gradient-red,
+            $gradient-completion-red
+          );
+        }
+        &3 {
+          background-image: linear-gradient(
+            25deg,
+            $gradient-sand,
+            $gradient-completion-sand
+          );
+        }
+      }
+    }
+    &:hover &-side-front {
+      transform: rotateY(0deg);
+    }
+    &:hover &-side-back {
+      transform: rotateY(0deg);
+    }
+    // FRONT SIDE OF THE CARD
+    &-picture {
+      background-size: cover;
+      background-position: center;
+      background-blend-mode: overlay;
+      position: absolute;
+      height: 35%;
+      width: 100%;
+      -webkit-clip-path: polygon(
+        0 0,
+        100% 0,
+        100% 95%,
+        72% 90%,
+        58% 71%,
+        40% 87%,
+        0 80%
+      );
+      clip-path: polygon(
+        0 0,
+        100% 0,
+        100% 100%,
+        72% 95%,
+        54% 75%,
+        40% 90%,
+        0 87%
+      );
+      &-1 {
+        background-image: linear-gradient(
+            25deg,
+            $gradient-skyblue,
+            $gradient-completion-skyblue
+          ),
+          url("../img/malga3.jpg");
+      }
+      &-2 {
+        background-image: linear-gradient(
+            25deg,
+            $gradient-red,
+            $gradient-completion-red
+          ),
+          url("../img/malga2.jpg");
+      }
+      &-3 {
+        background-image: linear-gradient(
+            25deg,
+            $gradient-sand,
+            $gradient-completion-sand
+          ),
+          url("../img/malga1.jpg");
+      }
+    }
+    // / CARD TITLE
+    &-title {
+      position: absolute;
+      top: 10%;
+      right: 5%;
+      z-index: 2;
+      color: $white;
+      text-transform: uppercase;
+      font-size: 2.5rem;
+      width: 50%;
+      text-align: right;
+    }
+    &-title-span {
+      padding: 0.5rem 1rem;
+      -webkit-box-decoration-brake: clone; // not working for some reason
+      &-1 {
+        background-image: linear-gradient(
+          25deg,
+          rgba($gradient-skyblue, 0.8),
+          rgba($gradient-completion-skyblue, 0.8)
+        );
+      }
+      &-2 {
+        background-image: linear-gradient(
+          25deg,
+          rgba($gradient-red, 0.8),
+          rgba($gradient-completion-red, 0.8)
+        );
+      }
+      &-3 {
+        background-image: linear-gradient(
+          25deg,
+          rgba($gradient-sand, 0.8),
+          rgba($gradient-completion-sand, 0.8)
+        );
+      }
+    }
+    &-descr {
+      position: relative;
+      display: block;
+      font-size: 1.5rem;
+      width: 70%;
+      margin: 34rem auto 1rem auto;
+    }
+    &-list {
+      width: 70%;
+      margin: 0 auto;
+      padding: 0.5rem;
+      font-size: 1.5rem;
+      & li {
+        padding: 1rem 2rem;
+        border-top: solid 1px rgba(0, 0, 0, 0.2);
+      }
+    }
+    // back
+    &-wrap {
+      height: 26rem;
+      position: relative;
+      & a {
+        position: relative;
+        margin: 6rem 0 2rem 0;
+      }
+      &:hover .card-price-title {
+        transform: translateX(0);
+      }
+    }
+    &-price {
+      font-size: 3.5rem;
+      display: block;
+      color: white;
+      text-shadow: 0 0 0.5rem $black-shadow;
+      position: relative;
+      margin-top: 2rem;
+      & p {
+        padding: 0;
+      }
+      &-title {
+        transform: translateY(-20%);
+        transition: transform 0.3s ease-out;
+      }
+      &-money {
+        font-weight: 300;
+      }
+    }
+  }
 }

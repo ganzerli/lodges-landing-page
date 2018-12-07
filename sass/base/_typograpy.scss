@@ -39,7 +39,7 @@ a {
 }
 
 .secondary-header {
-  font-size: 4.2rem;
+  font-size: 4.4rem;
   text-transform: uppercase;
   font-weight: 900;
   text-align: center;
@@ -47,18 +47,18 @@ a {
   background: #22c1c3; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
-    #fdbb2d,
-    #22c1c3
+    #ffe136,
+    #11edf1
   ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
     to right,
-    #fdbb2d,
-    #22c1c3
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    $gradient-completion-sand,
+    rgb(67, 219, 40)
+  );
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   -webkit-background-clip: text;
   color: transparent;
   letter-spacing: 2px;
-  text-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.1);
   transition: all 0.3s;
   @include responsiveFor(tab-landscape) {
     padding: 1rem 4rem;
@@ -76,6 +76,9 @@ a {
   font-size: 2.5rem;
   font-weight: 700;
   text-transform: uppercase;
+  @include responsiveFor(tab-portrait) {
+    font-size: 3rem;
+  }
 }
 .presentation {
   font-size: 1.5rem;

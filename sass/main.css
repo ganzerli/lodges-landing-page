@@ -186,13 +186,12 @@ a {
   background: #22c1c3;
   /* fallback for old browsers */
   /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, left top, right top, from(#fdbb2d), to(#22c1c3));
-  background: linear-gradient(to right, #fdbb2d, #22c1c3);
+  background: -webkit-gradient(linear, left top, right top, from(#ffa023), to(#43db28));
+  background: linear-gradient(to right, #ffa023, #43db28);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   -webkit-background-clip: text;
   color: transparent;
   letter-spacing: 2px;
-  text-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.1);
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
@@ -1402,7 +1401,7 @@ ul {
 .section-offers {
   color: #888;
   background-color: #fafafa;
-  background: linear-gradient(20deg, rgba(0, 195, 255, 0.1), rgba(255, 255, 28, 0.1));
+  background: linear-gradient(20deg, rgba(0, 255, 255, 0.2), rgba(51, 255, 0, 0.2));
   padding: 10rem 0;
   text-align: center;
   margin-top: -6rem;

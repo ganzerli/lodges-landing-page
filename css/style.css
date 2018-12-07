@@ -17,6 +17,15 @@
 .align-center {
   text-align: center; }
 
+.m-2 {
+  margin: 2rem; }
+
+.m-4 {
+  margin: 4rem; }
+
+.m-6 {
+  margin: 6rem; }
+
 .mb-8 {
   margin-bottom: 8rem; }
 
@@ -40,6 +49,16 @@
 
 .p-8 {
   padding: 8rem; }
+
+@media (max-width: 56.25em) {
+  .mobile-up-2 {
+    margin-top: -2rem; }
+  .mobile-down-2 {
+    margin-bottom: -2rem; }
+  .mobile-up-4 {
+    margin-top: -4; }
+  .mobile-down-4 {
+    margin-bottom: -4; } }
 
 @keyframes welcomeButton {
   0% {
@@ -68,7 +87,7 @@ body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   line-height: 1.5;
-  color: #888; }
+  color: #555; }
 
 a {
   text-decoration: none; }
@@ -102,21 +121,20 @@ a {
       animation: welcomeUp 1.5s ease; }
 
 .secondary-header {
-  font-size: 4.2rem;
+  font-size: 4.4rem;
   text-transform: uppercase;
   font-weight: 900;
   text-align: center;
   display: inline-block;
   background: #22c1c3;
   /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #fdbb2d, #22c1c3);
+  background: -webkit-linear-gradient(to right, #ffe136, #11edf1);
   /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #fdbb2d, #22c1c3);
+  background: linear-gradient(to right, #ffa023, #43db28);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   -webkit-background-clip: text;
   color: transparent;
   letter-spacing: 2px;
-  text-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.1);
   transition: all 0.3s; }
   @media (max-width: 75em) {
     .secondary-header {
@@ -133,6 +151,9 @@ a {
   font-size: 2.5rem;
   font-weight: 700;
   text-transform: uppercase; }
+  @media (max-width: 56.25em) {
+    .tertiary-header {
+      font-size: 3rem; } }
 
 .presentation {
   font-size: 1.5rem; }
@@ -361,7 +382,7 @@ ul {
     content: "";
     width: 3rem;
     height: 3px;
-    background: #888;
+    background: #555;
     display: inline-block;
     border-radius: 3px;
     transition: all 0.3s; }
@@ -401,6 +422,9 @@ ul {
   opacity: 0;
   visibility: hidden;
   transition: all 0.4s; }
+  @media (max-width: 56.25em) {
+    .popup {
+      text-align: center; } }
   .popup:target {
     opacity: 1;
     visibility: visible; }
@@ -422,17 +446,24 @@ ul {
   .popup-left {
     width: 33.3333%;
     display: table-cell; }
+    @media (max-width: 56.25em) {
+      .popup-left {
+        width: 0; } }
   .popup-right {
     width: 66.6666%;
     display: table-cell;
     vertical-align: middle;
     padding: 3rem 5rem;
     background-color: rgba(0, 0, 0, 0.1); }
+    @media (max-width: 56.25em) {
+      .popup-right {
+        width: 100%; } }
   .popup-img {
     display: block;
     min-height: 25%;
     width: 100%; }
   .popup-text {
+    text-align: justify;
     font-size: 1.4rem;
     margin-bottom: 4rem;
     column-count: 2;
@@ -457,6 +488,8 @@ ul {
     line-height: 1; }
   .popup-close:hover {
     color: #4db2d2; }
+  .popup .button-animated {
+    box-shadow: 0 0 3px 2px #3dfd1b; }
 
 .button-animated {
   animation: welcomeButton 0.3s ease-out 1s;
@@ -474,6 +507,9 @@ ul {
     position: relative;
     border: none;
     cursor: pointer; }
+    @media (max-width: 56.25em) {
+      .button-animated, .button-animated:link, .button-animated:visited {
+        font-size: 1.8rem; } }
   .button-animated:hover {
     transform: translateY(-0.2rem);
     box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2); }
@@ -691,6 +727,105 @@ ul {
       transition: transform 0.3s ease-out; }
     .card-price-money {
       font-weight: 300; }
+  @media (max-width: 56.25em) {
+    .card-side {
+      min-height: 10rem;
+      height: auto;
+      position: relative;
+      width: 80%;
+      overflow: hidden;
+      border-radius: 3px;
+      box-shadow: 0 0 3rem -0.5rem rgba(0, 0, 0, 0.2); }
+      .card-side-front {
+        background-color: white;
+        padding-bottom: 30rem; }
+      .card-side-back {
+        margin-top: -28rem;
+        background-color: white;
+        transform: rotateY(0deg);
+        border-radius: 0 0 3px 3px;
+        clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+        box-shadow: 0 0 3rem -0.5rem rgba(0, 0, 0, 0.2); }
+        .card-side-back1 {
+          background-image: linear-gradient(25deg, #c6ffdd, #4db2d2); }
+        .card-side-back2 {
+          background-image: linear-gradient(25deg, #f7797d, #ec4f3a); }
+        .card-side-back3 {
+          background-image: linear-gradient(25deg, #fbd886, #ffa023); }
+    .card:hover .card-side-front {
+      transform: rotateY(0deg); }
+    .card:hover .card-side-back {
+      transform: rotateY(0deg); }
+    .card-picture {
+      background-size: cover;
+      background-position: center;
+      background-blend-mode: overlay;
+      position: absolute;
+      height: 35%;
+      width: 100%;
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 95%, 72% 90%, 58% 71%, 40% 87%, 0 80%);
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 72% 95%, 54% 75%, 40% 90%, 0 87%); }
+      .card-picture-1 {
+        background-image: linear-gradient(25deg, #c6ffdd, #4db2d2), url("../img/malga3.jpg"); }
+      .card-picture-2 {
+        background-image: linear-gradient(25deg, #f7797d, #ec4f3a), url("../img/malga2.jpg"); }
+      .card-picture-3 {
+        background-image: linear-gradient(25deg, #fbd886, #ffa023), url("../img/malga1.jpg"); }
+    .card-title {
+      position: absolute;
+      top: 10%;
+      right: 5%;
+      z-index: 2;
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 2.5rem;
+      width: 50%;
+      text-align: right; }
+    .card-title-span {
+      padding: 0.5rem 1rem;
+      -webkit-box-decoration-brake: clone; }
+      .card-title-span-1 {
+        background-image: linear-gradient(25deg, rgba(198, 255, 221, 0.8), rgba(77, 178, 210, 0.8)); }
+      .card-title-span-2 {
+        background-image: linear-gradient(25deg, rgba(247, 121, 125, 0.8), rgba(236, 79, 58, 0.8)); }
+      .card-title-span-3 {
+        background-image: linear-gradient(25deg, rgba(251, 216, 134, 0.8), rgba(255, 160, 35, 0.8)); }
+    .card-descr {
+      position: relative;
+      display: block;
+      font-size: 1.5rem;
+      width: 70%;
+      margin: 34rem auto 1rem auto; }
+    .card-list {
+      width: 70%;
+      margin: 0 auto;
+      padding: 0.5rem;
+      font-size: 1.5rem; }
+      .card-list li {
+        padding: 1rem 2rem;
+        border-top: solid 1px rgba(0, 0, 0, 0.2); }
+    .card-wrap {
+      height: 26rem;
+      position: relative; }
+      .card-wrap a {
+        position: relative;
+        margin: 6rem 0 2rem 0; }
+      .card-wrap:hover .card-price-title {
+        transform: translateX(0); }
+    .card-price {
+      font-size: 3.5rem;
+      display: block;
+      color: white;
+      text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+      position: relative;
+      margin-top: 2rem; }
+      .card-price p {
+        padding: 0; }
+      .card-price-title {
+        transform: translateY(-20%);
+        transition: transform 0.3s ease-out; }
+      .card-price-money {
+        font-weight: 300; } }
 
 .review {
   width: 65%;
@@ -734,13 +869,15 @@ ul {
     min-width: 18rem; }
     @media (max-width: 37.5em) {
       .review-text {
-        transform: skewX(-2deg); } }
+        transform: skewX(-2deg);
+        font-size: 1.8rem; } }
     .review-text .comment {
+      color: #2c2c2c;
       font-weight: 400;
       max-height: 15rem; }
       @media (max-width: 56.25em) {
         .review-text .comment {
-          margin-bottom: 2rem; } }
+          font-size: 1.8rem; } }
   .review-figcaption {
     position: absolute;
     top: 50%;
@@ -860,10 +997,13 @@ ul {
   .form button {
     box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.2);
     border: 1px solid #b0deb0;
-    margin-bottom: 4rem; }
+    margin: 2rem auto; }
+  @media (max-width: 56.25em) {
+    .form-mobile-center {
+      text-align: center; } }
 
 .section-about {
-  color: #888;
+  color: #555;
   background-color: #fafafa;
   padding: 16rem 0;
   margin-top: -20rem;
@@ -894,9 +1034,9 @@ ul {
     transform: skewY(-4deg); }
 
 .section-offers {
-  color: #888;
+  color: #555;
   background-color: #fafafa;
-  background: linear-gradient(20deg, rgba(0, 255, 255, 0.5), rgba(51, 255, 0, 0.5));
+  background: linear-gradient(20deg, rgba(0, 255, 255, 0.2), rgba(51, 255, 0, 0.2));
   padding: 10rem 0;
   text-align: center;
   margin-top: -6rem; }

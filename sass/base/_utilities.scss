@@ -1,6 +1,17 @@
 .align-center {
   text-align: center;
 }
+//margin
+.m-2 {
+  margin: 2rem;
+}
+.m-4 {
+  margin: 4rem;
+}
+.m-6 {
+  margin: 6rem;
+}
+//margin-bottom
 .mb-8 {
   margin-bottom: 8rem;
 }
@@ -27,4 +38,22 @@
 
 .p-8 {
   padding: 8rem;
+}
+
+// MARGIN UP AND DOWN PHONE
+@media (max-width: 56.25em) {
+  //600px , 600px / 16px = 37.5em
+
+  .mobile-up-2 {
+    margin-top: -2rem;
+  }
+  .mobile-down-2 {
+    margin-bottom: -2rem;
+  }
+  .mobile-up-4 {
+    margin-top: -4;
+  }
+  .mobile-down-4 {
+    margin-bottom: -4;
+  }
 }
