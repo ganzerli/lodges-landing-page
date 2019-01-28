@@ -1,5 +1,5 @@
 .header {
-  height: 95vh;
+  height: 98vh;
   background-image: $gradient-primary, url(../img/backgroundHeader.jpg);
   background-size: cover;
   background-position: top; /* stick image at top*/
@@ -13,6 +13,7 @@
     40% 87%,
     0 80%
   );
+
   clip-path: polygon(0 0, 100% 0, 100% 100%, 72% 95%, 54% 75%, 40% 90%, 0 87%);
   position: relative;
   &_logo-box {

@@ -5,15 +5,16 @@
   padding: 0;
   box-sizing: inherit;
 }
+
 html {
   font-size: 62.5%; // defined 1rem as 10px; 10px/16px = 62.5%
   // IN THE MIXIN IS DEFINED WHICH MEDIA QUERY TO LOOK TO APPLY THIS CONTENT
+  scroll-behavior: smooth;
   /*
   @include responsiveFor(phone) {
     font-size: 50%;
   }
   */ // if same as other values is not needed, tab portrait is declared alredy as less then 900px, then is also for less then 400;
-
   @include responsiveFor(tab-landscape) {
     //width < 900?
     font-size: 56.25%; // to have 1 ream as 9px 9/16px = 56.25%
@@ -27,9 +28,11 @@ html {
     font-size: 75%;
   }
 }
+
 body {
   box-sizing: border-box;
 }
+
 ul {
   list-style: none;
 }

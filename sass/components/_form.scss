@@ -19,10 +19,12 @@
     @include responsiveFor(tab-portrait) {
       width: calc(100vw - 150% + 40%);
     }
+
     @include responsiveFor(phone) {
       width: 100%;
       padding: 1.5rem 0;
     }
+
     &:focus {
       outline: none;
       box-shadow: 0 1rem 1.5rem $black-shadow;
@@ -62,6 +64,7 @@
       }
     }
   }
+
   &-radio-label {
     font-size: $font-16;
     cursor: pointer;

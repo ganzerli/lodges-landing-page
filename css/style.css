@@ -181,6 +181,7 @@ a {
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
   /*
   @include responsiveFor(phone) {
     font-size: 50%;
@@ -206,7 +207,7 @@ ul {
   background-image: linear-gradient(20deg, rgba(247, 121, 125, 0.4), rgba(251, 216, 134, 0.4), rgba(198, 255, 221, 0.4)); }
 
 .header {
-  height: 95vh;
+  height: 98vh;
   background-image: linear-gradient(20deg, rgba(247, 121, 125, 0.4), rgba(251, 216, 134, 0.4), rgba(198, 255, 221, 0.4)), url(../img/backgroundHeader.jpg);
   background-size: cover;
   background-position: top;
@@ -232,9 +233,6 @@ ul {
     @media (max-width: 56.25em) {
       .row:not(:last-child) {
         margin-bottom: 6rem; } }
-  @media (max-width: 56.25em) {
-    .row {
-      max-width: 70%; } }
   .row::after {
     content: "";
     display: table;
@@ -257,6 +255,12 @@ ul {
     width: calc((100% - 2 * 4rem) / 3); }
   .row .col-1-4 {
     width: calc((100% - 3 *4rem) / 4); }
+  @media (max-width: 56.25em) {
+    .row {
+      max-width: 70%; } }
+  @media (max-width: 37.5em) {
+    .row {
+      max-width: 90%; } }
 
 .footer {
   background-color: #302f38;
@@ -481,7 +485,7 @@ ul {
     margin-bottom: 4rem;
     column-count: 2;
     column-gap: 4rem;
-    column-rule: 1px solid rgba(0, 0, 0, 0.2);
+    column-rule: 1px dashed rgba(0, 0, 0, 0.2);
     -moz-column-rule: 1px solid rgba(0, 0, 0, 0.2);
     -ms-column-rule: 1px solid rgba(0, 0, 0, 0.2);
     -webkit-column-rule: 1px solid rgba(0, 0, 0, 0.2);
